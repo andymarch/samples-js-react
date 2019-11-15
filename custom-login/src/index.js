@@ -10,12 +10,19 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
+import { TextEncoder } from 'text-encoding';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'semantic-ui-css/semantic.min.css';
 import App from './App';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
+
+// polyfill TextEncoder for IE Edge
+/* global window */
+if (window.TextEncoder === 'undefined') {
+  window.TextEncoder = TextEncoder;
+}
 
 /* global document */
 /* eslint-disable react/jsx-filename-extension */
