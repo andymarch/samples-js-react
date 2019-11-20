@@ -2,6 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 // Support storing environment variables in a file named "testenv"
+const crypto = require('isomorphic-webcrypto')
 const path = require('path');
 const dotenv = require('dotenv');
 const fs = require('fs');
