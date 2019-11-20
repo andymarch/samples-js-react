@@ -3,6 +3,7 @@
   "version": "1.4.0",
   "description": "React Sample Applications for Okta",
   "scripts": {
+    "start": "npm start --prefix okta-hosted-login/",
     "banners": "node tools/maintain-banners.js {okta-hosted-login,custom-login,tools,scripts}/{*js,src/**/*{js,jsx,css}}",
     "test": "eslint -c .eslintrc.json --ext .js --ext .jsx okta-hosted-login/src/ custom-login/src/ scripts/ -- --fix && npm run test:e2e",
     "okta-hosted-login-server": "npm start --prefix okta-hosted-login/",
